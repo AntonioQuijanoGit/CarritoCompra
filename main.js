@@ -111,7 +111,7 @@ function renderStore() {
         console.log(db, shoppingCart);
         renderShoppingCart();
       } else {
-        alert("Ya no hay existencia de ese artículo");
+        alert("No stock");
       }
     });
   });
@@ -142,7 +142,7 @@ function renderShoppingCart() {
   const purchaseButton =
     shoppingCart.items.length > 0
       ? `<div class="cart-actions">
-    <button id="bPurchase">Terminar compra</button>
+    <button id="bPurchase">Buy</button>
   </div>`
       : "";
   const total = shoppingCart.methods.getTotal();
